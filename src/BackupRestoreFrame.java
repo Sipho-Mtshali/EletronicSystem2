@@ -114,7 +114,7 @@ public class BackupRestoreFrame extends javax.swing.JFrame {
        try {
         String dbName = "ElectronicSystemDb";
         String dbUser = "root";
-        String dbPass = "Zethembe@123456789";
+        String dbPass = "12345678";
         String backupPath = "backup.sql";
 
         // Backup locally
@@ -148,7 +148,7 @@ public class BackupRestoreFrame extends javax.swing.JFrame {
  try {
         String dbName = "ElectronicSystemDb";
         String dbUser = "root";
-        String dbPass = "Zethembe@123456789";
+        String dbPass = "12345678";
         String backupPath = "backup_downloaded.sql";
 
         // Download from cloud

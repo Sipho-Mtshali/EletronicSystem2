@@ -31,7 +31,7 @@ private void connectDatabase() {
             // Update these credentials according to your database setup
             String url = "jdbc:mysql://localhost:3306/ElectronicSystemDb";
             String username = "root";
-            String password = "Zethembe@123456789";
+            String password = "12345678";
             
             // Load MySQL JDBC Driver
             Class.forName("com.mysql.cj.jdbc.Driver");

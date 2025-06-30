@@ -251,7 +251,7 @@ public class loginPage extends javax.swing.JFrame {
 // FIXED authenticateUser method - handles both plain text and hashed passwords
 private boolean authenticateUser(String username, String password) {
     try {
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb", "root", "Zethembe@123456789");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb", "root", "12345678");
         
         // Try with plain text password first (since your DB stores plain text)
         String query = "SELECT * FROM users WHERE (username = ? OR email = ?) AND password = ? AND isActive = TRUE";
@@ -354,7 +354,7 @@ private String hashPassword(String password) {
 // Alternative: Simple version that just uses plain text passwords
 private boolean authenticateUserSimple(String username, String password) {
     try {
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb", "root", "Zethembe@123456789");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb", "root", "12345678");
         
         String query = "SELECT * FROM users WHERE (username = ? OR email = ?) AND password = ? AND isActive = TRUE";
         pst = conn.prepareStatement(query);

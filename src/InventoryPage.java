@@ -39,7 +39,7 @@ public class InventoryPage extends javax.swing.JFrame {
             connection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/ElectronicSystemDb", 
                 "root", 
-                "Zethembe@123456789"
+                "12345678"
             );
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Database connection failed: " + ex.getMessage());
