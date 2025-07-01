@@ -328,7 +328,7 @@ public class AddUserPage extends javax.swing.JFrame {
 
     private void loadUserRoles() {
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb", "root", "12345678");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb", "root", "General@123");
             String query = "SELECT roleName FROM user_roles ORDER BY roleName";
             pst = conn.prepareStatement(query);
             rs = pst.executeQuery();
@@ -398,7 +398,7 @@ public class AddUserPage extends javax.swing.JFrame {
                       "dataBackupRestore, generateReport, isActive, createdAt) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,NOW())";
         
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb", "root", "12345678");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb", "root", "General@123");
             pst = conn.prepareStatement(query);
             
             pst.setString(1, firstName);
@@ -559,7 +559,7 @@ public class AddUserPage extends javax.swing.JFrame {
     
     private boolean userExists(String username, String email) {
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb", "root", "12345678");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb", "root", "General@123");
             String query = "SELECT COUNT(*) FROM users WHERE username = ? OR email = ?";
             pst = conn.prepareStatement(query);
             pst.setString(1, username);

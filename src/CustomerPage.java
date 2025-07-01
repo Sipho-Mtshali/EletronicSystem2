@@ -254,7 +254,7 @@ public class CustomerPage extends javax.swing.JFrame {
         model.setRowCount(0); // Clear existing data
         
         try {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb", "root", "12345678");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb", "root", "General@123");
             PreparedStatement ps = con.prepareStatement("SELECT * FROM customersTable");
             ResultSet rs = ps.executeQuery();
             
@@ -315,7 +315,7 @@ public class CustomerPage extends javax.swing.JFrame {
     }
 
     try {
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb", "root", "12345678");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb", "root", "General@123");
         PreparedStatement ps = con.prepareStatement("INSERT INTO customersTable(fullname,email,contact_number) VALUES (?,?,?)");
         ps.setString(1, fullname);
         ps.setString(2, email);
@@ -356,7 +356,7 @@ String id = txtId.getText();
     int confirm = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete this customer?", "Confirm Delete", JOptionPane.YES_NO_OPTION);
     if (confirm == JOptionPane.YES_OPTION){
         try{
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb","root","12345678");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb","root","General@123");
             PreparedStatement ps = con.prepareStatement("DELETE FROM customersTable WHERE id = ?");
             ps.setString(1, id);
             
@@ -388,7 +388,7 @@ String id = txtId.getText();
     private void ButtunUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtunUpdateActionPerformed
         // TODO add your handling code here:
 try{
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb","root","12345678");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb","root","General@123");
         PreparedStatement ps = con.prepareStatement("UPDATE customersTable SET fullname = ?, email = ?, contact_number = ? WHERE id = ?");
         
         // Correct parameter order
@@ -425,7 +425,7 @@ try{
         // TODO add your handling code here:
 
         try{
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb","root","Zethembe@123456789");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ElectronicSystemDb","root","General@123");
             PreparedStatement ps = con.prepareStatement("SELECT * FROM customersTable WHERE id = ?");
             ps.setString(1, txtId.getText());
             ResultSet rs = ps.executeQuery(); 
