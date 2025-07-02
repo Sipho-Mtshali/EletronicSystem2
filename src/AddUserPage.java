@@ -201,6 +201,11 @@ public class AddUserPage extends javax.swing.JFrame {
 
         btnViewAllUsers.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnViewAllUsers.setText("Dou you want to view all users?click me");
+        btnViewAllUsers.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnViewAllUsersMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -640,6 +645,12 @@ public class AddUserPage extends javax.swing.JFrame {
             new Dashboard().setVisible(true);
         }
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnViewAllUsersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewAllUsersMouseClicked
+        // TODO add your handling code here:
+         setVisible(false);
+         new ViewUsersForm().setVisible(true);
+    }//GEN-LAST:event_btnViewAllUsersMouseClicked
 
     /**
      * @param args the command line arguments
